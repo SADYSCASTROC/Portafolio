@@ -1,10 +1,14 @@
 import { Navbar } from "./Navbar"
+import { Description } from "./Description"
 export const Presentation = () => {
     return (
         <>
             <header>
-                <Navbar/>
+                <Navbar />
             </header>
+            <main>
+                <Description />
+            </main>
         </>
     )
 }

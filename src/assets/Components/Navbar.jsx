@@ -26,7 +26,7 @@ export const Navbar = () => {
                     {/* Le pasamos las props */}
                     <BurguerButton clicked={clicked} handleClick={handleClick} />
                 </div>
-                <Bgdiv className={`initial ${clicked ?'active' : ''}`}></Bgdiv>
+                <Bgdiv className={`initial ${clicked ? 'active' : ''}`}></Bgdiv>
             </NavContainer>
         </>
     )
@@ -44,6 +44,8 @@ h2{
     font-weight: bold;
     color:var(--wite-leter);
     width: 100%;
+    font-size: 1.3rem;
+    
 }
 padding: 10px;
 display:flex;
@@ -81,9 +83,11 @@ a{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    top: 30%;
+    z-index:1;
+    top: 208%;
     lef: 0;
     rigth: 0;
+    transition: all .9s ease;
     text-align:center;
     a{
         font-size: 1rem;
@@ -99,22 +103,23 @@ a{
 }
 
 `
-const Bgdiv = styled.div `
-
+const Bgdiv = styled.div`
 position: absolute;
 background-color:  #FFFFFF;
 top: -700px;
 left:-1000px;
-z-index: -1;
 width: 70%;
 height: 100%;
 transition: all .8s ease;
+@media(min-width: 769px){
+ display: none;
+}
 &.active{
     border-radius: 0 0 80% 0;
     width: 70%;
     height: 100%;
-    top: 0;
-    left:0;
+    top: 55px;
+    left: 0;
+    position: fixed;
 }
-
 `
