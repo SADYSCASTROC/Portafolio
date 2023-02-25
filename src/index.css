@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --wite-leter: #FFFFFF;
+  --background-black: #1B2631;
+  --hover-pink: #FF00FF;
+  --vectores-gray: #566573;
+}
+
+body{
+  background-color: var(--background-black);
+}
+
+header{
+  height: 55px;
+  background-color: var(--background-black);
+  font-weight: bold;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  
+}
+
+
+
+
