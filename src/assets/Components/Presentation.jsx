@@ -1,5 +1,6 @@
 import { Navbar } from "./Navbar"
 import { Description } from "./Description"
+import { InformationAcadem } from "./InformationAcadem"
 export const Presentation = () => {
     return (
         <>
@@ -8,6 +9,7 @@ export const Presentation = () => {
             </header>
             <main>
                 <Description />
+                <InformationAcadem />
             </main>
         </>
     )

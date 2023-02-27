@@ -12,7 +12,7 @@ font-family: 'Montserrat', sans-serif;
 
 :root {
   --wite-leter: #FFFFFF;
-  --background-black: #1B2631;
+  --background-black: #000509f5;
   --hover-pink: #FF00FF;
   --vectores-gray: #566573;
 }
@@ -32,15 +32,23 @@ header{
   z-index: 100;
 
 }
+.container-education{
+  background-image: url("./img/fondo-section.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .p{
   height: 800px;
   background-color:#FF00FF;
-  width: 100%;
-  margin-top: 50px;
-  padding: auto;
-  text-align: center;
-  font-family: karla;
+text-align: center;
+  display: flex;
+background-color: aliceblue;
+height: auto;
+width: 50%;
+margin: 5px;
+margin-top: 10px;
 }
+
 
 
 
