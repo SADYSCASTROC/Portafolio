@@ -2,14 +2,14 @@ import styled from "styled-components";
 import fotoPerfil from '../../img/hero-foto-perfil.png'
 export const Description = () => {
   return (
-    <div className="animate__fadeInLeft">    
+    <div className="animate__fadeInLeft" data-aos="fade-right">    
       <DescriptionAbput>
       <img src={fotoPerfil} alt="foto" />
-      <div className="container">
+      <div className="container" data-aos="fade-right">
         <h3>Sadys Castro, <span>Desarrolladora web</span></h3>
         <p>Ingrese al mundo de la tecnologia porque la 
           duda de saber como funcionaban las cosas en el mundo tecnologico,
-          un mundo nuevo, fascinante, de ahi surgio un objetivo "aprender programacion". 
+          un mundo nuevo, fascinante, de ahi surgio un objetivo <i>"aprender programacion".</i> <br /> 
           Me considero una mujer comprometida, proactiva
           con un alto interes en aprender y orgullosa de lo que he logrado hasta el dia de hoy. 
           Busco siempre aprender con el fin de crecer personal eintelectualmente.

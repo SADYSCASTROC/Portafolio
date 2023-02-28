@@ -34,20 +34,21 @@ header{
 }
 .container-education{
   background-image: url("./img/fondo-section.svg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .p{
   height: 800px;
   background-color:#FF00FF;
 text-align: center;
   display: flex;
-background-color: aliceblue;
-height: auto;
-width: 50%;
-margin: 5px;
-margin-top: 10px;
+background-color: var(--vectores-gray);
+color: var(--wite-leter);
+border: 2px solid #FF00FF;
+
 }
+
 
 
 

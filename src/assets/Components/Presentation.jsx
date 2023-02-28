@@ -1,6 +1,8 @@
 import { Navbar } from "./Navbar"
 import { Description } from "./Description"
 import { InformationAcadem } from "./InformationAcadem"
+import { Projects } from "./Projects"
+import { ContactSection } from "./ContactSection"
 export const Presentation = () => {
     return (
         <>
@@ -10,6 +12,8 @@ export const Presentation = () => {
             <main>
                 <Description />
                 <InformationAcadem />
+                <Projects/>
+                <ContactSection/>
             </main>
         </>
     )

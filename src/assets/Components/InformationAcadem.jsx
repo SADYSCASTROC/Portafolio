@@ -7,18 +7,18 @@ import { Skill } from './Skill';
 
 export const InformationAcadem = () => {
     return (
-        <div>
+        <div data-aos="fade-right">
             <Academic>
                 <h2>Sobre mí</h2>
                 <div className='separator animate__bounceOut'></div>
-                <div className='container-education'>
+                <div className='container-education' data-aos="fade-right">
 
-                    <div className='studen'>
+                    <div className='studen' data-aos="fade-right">
                         <div className='conte'><span><img src={edicacion} alt="" />
                         </span>
                             <h4>Estudios</h4>
                         </div>
-                        <div className='car-education'>
+                        <div className='car-education' data-aos="fade-right">
                             <div className='circle'></div> <div className='corporacion'><p>Programacion de Software</p> <p>2019-2020</p> <p>Sena</p></div>
                             <div className='circle'></div> <div className='corporacion'><p>Desarrollo web Frontend</p> <p>2022-2022</p> <p>Laboratoria</p></div>
                         </div>
@@ -27,12 +27,12 @@ export const InformationAcadem = () => {
                         </span>
                             <h4>Idiomas</h4>
                         </div>
-                        <div className='car-education'>
+                        <div className='car-education' data-aos="fade-right">
                             <div className='circle'></div> <div className='corporacion'> <p>Español/ Nativo</p> </div>
                             <div className='circle'></div> <div className='corporacion'><p>Ingles/ Basico</p></div>
                         </div>
                     </div>
-                    <h3>Habilidades tecnicas</h3>
+                    <h3 data-aos="fade-right">Habilidades tecnicas</h3>
                     <Skill/>
                 </div>
             </Academic>
@@ -66,7 +66,7 @@ img{
     height: 40px;
 }
 .container-education{
-    padding:40px;
+    padding:20px;
 
 }
 

@@ -17,29 +17,48 @@ export const data = {
         {
             "name": "CSS",
             "img": "https://i.ibb.co/cJNpGYd/css.png",
+        },
+        {
+            "name": "Bootstrap",
+            "img": "https://i.ibb.co/yBk9XMR/bootstrap-1.png",
+        },
+        {
+            "name": "CSS",
+            "img": "https://i.ibb.co/9NRhrkD/figma-1.png",
         }
+        
     ],
 
-    "proyectos": [
+    "projects": [
         {
-            "name": "JAVASCRIPT",
-            "img": "https://s4.aconvert.com/convert/p3r68-cdx67/avcy6-dozhj.png",
-            "tecnologias": "",
+            "name": "BATATABIT",
+            "img": "https://i.ibb.co/QQ6G8Jh/proyec2-1.png",
+            "tecnologias": "HTML,CSS",
+            "links": "https://app.netlify.com/sites/statuesque-froyo-b7cb8d/overview",
         },
         {
-            "name": "JAVASCRIPT",
-            "img": "https://s4.aconvert.com/convert/p3r68-cdx67/avcy6-dozhj.png",
-            "tecnologias": "",
+            "name": "VALIDATE CARD",
+            "img": "https://i.ibb.co/cLJNx50/ecomerce-1.png",
+            "tecnologias": "HTML,CSS,JAVASCRIPT",
+            "links": "https://sadyscastroc.github.io/BOG005-card-validation/src/",
         },
         {
-            "name": "JAVASCRIPT",
-            "img": "https://s4.aconvert.com/convert/p3r68-cdx67/avcy6-dozhj.png",
-            "tecnologias": "",
+            "name": "SOCIAL NETWORK",
+            "img": "https://i.ibb.co/zXr76LM/redsocial-1.png",
+            "tecnologias": "HTML,CSS,JAVASCRIPT,FIRESTORE",
+            "links": "https://sadyscastroc.github.io/BOG005-social-network/src/",
         },
         {
-            "name": "JAVASCRIPT",
-            "img": "https://s4.aconvert.com/convert/p3r68-cdx67/avcy6-dozhj.png",
-            "tecnologias": "",
+            "name": "GIFEXPER APP",
+            "img": "https://i.ibb.co/xmNDLp3/proyecto3-1.png",
+            "tecnologias": "HTML,JAVASCRIPT,REACT,API REST,BOOTSTRAP",
+            "links": "https://sadyscastroc.github.io/gif-expert/",
+        },
+        {
+            "name": "SAVE LINKS",
+            "img": "https://i.ibb.co/RcJmt2v/proyec1-1.png",
+            "tecnologias": "HTML,JAVASCRIPT,REACT,BOOTSTRAP",
+            "links": "https://chimerical-twilight-e2f6ba.netlify.app/",
         },
     ]
 

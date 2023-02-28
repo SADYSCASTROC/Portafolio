@@ -18,7 +18,7 @@ export const Skill = () => {
         <TechnicalSkills>
             {
                 skills.map(item => (
-                    <div key={item.name} className="card-tecnologias">
+                    <div key={item.name} className="card-tecnologias" data-aos="fade-right">
                         <img src={item.img} alt="imagen" className="img-tecnologia" />
                     </div>
                 ))
