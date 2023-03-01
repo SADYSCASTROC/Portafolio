@@ -39,6 +39,7 @@ const ProjectsSection = styled.section`
 height: auto;
 width: 100%;
 padding: 20px;
+margin-top:20px;
 text-align: center;
 .separator{
     width: 70%;
@@ -49,10 +50,11 @@ text-align: center;
 }
 .container-car-project{
     display: flex;
-    height: 320px;
+    height: 371px;
     overflow-x: scroll;
     scroll-snap-type: proximity;
     width: 100%;
+    margin-top:15px;
 }
 .card-projects{
     position: relative;
@@ -60,7 +62,7 @@ text-align: center;
     width: 80%;
     min-width: 190px;
     max-width: 300px;
-    height: 100px;
+    height: 120px;
     margin: 50px 10px 0;
 }
 
@@ -73,14 +75,14 @@ h2{
 }
 
 .img-projects{
-    height: 180px;
+    height: 250px;
     width: 180px;
     opacity: 2;
 
 }
 .descrition{
     word-wrap: break-word;
-    height: 100px;
+    height: 120px;
     border-radius: 20px 20px 0 0;
     position: absolute;
     left: 0;
@@ -96,7 +98,6 @@ h2{
 .descrition:hover{
     opacity: 1;
     bottom: 0;
-  
 }
 
 
@@ -110,7 +111,7 @@ h3{
 
     a{
         text-decoration: none;
-        margin-left: 38px ;
+        margin-left: 50px ;
         background-color: var(--vectores-gray);
         margin-top: 15px;
         width: 60%;
@@ -128,7 +129,7 @@ h3{
       z-index: 1;
       overflow: hidden;
       display: inline-block;
-      margin-left: -20px ;
+      margin-left: 2px ;
     }
     .ov-btn-grow-skew-reverse::after {
       content: "";
@@ -157,6 +158,40 @@ h3{
         
     }
 
+    @media (min-width: 992px) {
+        .container-car-project{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0;
+        width: 100%;
+    }
+    .card-projects{
+            overflow-y: hidden;
+            height: auto;
+            padding: 0px;
+            width: 26%;
+        }
 
+        .descrition{
+            bottom: -32px;
+            width: 26%;
+            left: 52px;
+        }
+        .descrition:hover{
+            opacity: 1;
+            bottom: 187px;
+            width: 195px;
+        }
+
+        .img-projects{
+            height: 250px;
+            width: 200px;
+        
+        }
+     }
+     
 
 `

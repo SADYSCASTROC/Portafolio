@@ -7,13 +7,14 @@ import { Skill } from './Skill';
 
 export const InformationAcadem = () => {
     return (
-        <div data-aos="fade-right">
+        <div data-aos="fade-right" className='container-info-compl'>
             <Academic>
                 <h2>Sobre mí</h2>
                 <div className='separator animate__bounceOut'></div>
                 <div className='container-education' data-aos="fade-right">
 
                     <div className='studen' data-aos="fade-right">
+                        <div>
                         <div className='conte'><span><img src={edicacion} alt="" />
                         </span>
                             <h4>Estudios</h4>
@@ -22,7 +23,9 @@ export const InformationAcadem = () => {
                             <div className='circle'></div> <div className='corporacion'><p>Programacion de Software</p> <p>2019-2020</p> <p>Sena</p></div>
                             <div className='circle'></div> <div className='corporacion'><p>Desarrollo web Frontend</p> <p>2022-2022</p> <p>Laboratoria</p></div>
                         </div>
+                        </div>
 
+                        <div>
                         <div className='conte'><span><img src={idiomas} alt="" />
                         </span>
                             <h4>Idiomas</h4>
@@ -30,6 +33,7 @@ export const InformationAcadem = () => {
                         <div className='car-education' data-aos="fade-right">
                             <div className='circle'></div> <div className='corporacion'> <p>Español/ Nativo</p> </div>
                             <div className='circle'></div> <div className='corporacion'><p>Ingles/ Basico</p></div>
+                        </div>
                         </div>
                     </div>
                     <h3 data-aos="fade-right">Habilidades tecnicas</h3>
@@ -47,6 +51,11 @@ const Academic = styled.section`
     --hover-pink: #FF00FF;
     --vectores-gray: #566573;
   }
+
+  .container-info-compl{
+    height: auto;
+  }
+
 h2{
     margin-top:20px;
     color:var(--wite-leter);
@@ -79,7 +88,7 @@ margin: 10px;
 h4{
     margin-left: 15px ;
     color: var(--wite-leter);
-    font-size: 1.6rem ;
+    font-size: 1.2rem ;
 
 
 }
@@ -107,5 +116,52 @@ h3{
     width: 100%;
     text-align: center;
     font-size: 1rem ;
+}
+
+@media (min-width: 768px) {
+    .container-education{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+        .studen{
+            width: 60%;
+            margin-top:50px;
+        }
+    
+    h4{
+        font-size: 1.8rem ;
+    }
+    p{
+        font-size: 1.2rem ;
+    }
+    h3{
+        font-size: 1.rem ;
+    }
+}
+
+@media (min-width: 992px) {
+
+    h2{
+        font-size: 2rem ;
+        margin-top:135px;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;    
+    }
+    .studen{
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+    }
+    h3{
+        font-size: 1.4rem;   
+        margin-top:90px; 
+    }
+    
 }
 `

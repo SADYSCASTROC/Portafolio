@@ -18,6 +18,7 @@ export const ContactSection = () => {
 
 const Contact = styled.section`
 text-align: center;
+margin-top:50px;
 
 .separator{
   width: 70%;
@@ -34,8 +35,27 @@ text-align: center;
     text-align: center;
     font-size: 2rem ;
   }
-  .imgForm{
-    width: 50%;
+  .info-contact{
+    margin-top:25px;
   }
-}
+  .imgForm{
+    width: 60%;
+  }
+
+  @media (min-width: 768px) {
+    .imgForm {
+      width: 46%;
+  }
+  input {
+    width: 60%;
+    height: 38px;  
+    }
+    textarea {
+      width: 60%;
+    }
+    button {
+      width: 20%;
+      margin-top: 20px;
+    }
+  }
 `

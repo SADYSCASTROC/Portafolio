@@ -19,7 +19,7 @@ export const Skill = () => {
             {
                 skills.map(item => (
                     <div key={item.name} className="card-tecnologias" data-aos="fade-right">
-                        <img src={item.img} alt="imagen" className="img-tecnologia" />
+                        <img src={item.img} alt="imagen" className="img-tecnologia hiden" />
                     </div>
                 ))
             }
@@ -33,18 +33,40 @@ const TechnicalSkills = styled.div`
  overflow-x: scroll;
  scroll-snap-type: proximity;
  width: 100%;
+ margin-top:15px;
 
  .card-tecnologias{
     position: relative;
     scroll-snap-align: center;
-    width: 80%;
     min-width: 190px;
     max-width: 300px;
     height: 100px;
-    margin: 40px 0px 0;
+    margin: 40px -10px 0;
+    padding: 15px ;
+
  }
  .img-tecnologia{
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 124px;
+    transition: all 1.2s ease-out;
+ }
+ @media (min-width: 992px) {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0;
+    width: 60%;
+    justify-content: center;
+
+    .card-tecnologias{
+        position: sticky;
+        overflow-y: hidden;
+        height: auto;
+        margin: -4px;
+        padding: 0px;
+        margin-top: 24px;
+    }
  }
  `

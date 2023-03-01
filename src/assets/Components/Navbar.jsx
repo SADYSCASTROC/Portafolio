@@ -70,8 +70,8 @@ a{
         display: block;
     }
     @media(min-width: 769px){
-         position: initial;
-         width: 100%;
+        position: initial;
+        width: 100%;
         a{
             color: var(--wite-leter);
             display:inline;
@@ -97,7 +97,7 @@ a{
 }
 
 .burguer{
-    @media(min-width: 768px){
+    @media(min-width: 769px){
         display: none;
     }
 }

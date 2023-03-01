@@ -33,20 +33,18 @@ header{
 
 }
 .container-education{
-  background-image: url("./img/fondo-section.svg");
+  background-image: url("./img/fondo-section.png");
   background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-repeat: no-repeat; 
 }
-.p{
-  height: 800px;
-  background-color:#FF00FF;
-text-align: center;
-  display: flex;
-background-color: var(--vectores-gray);
-color: var(--wite-leter);
-border: 2px solid #FF00FF;
+footer{
+  margin-top: 50px;
+  border-top: 4px solid #566573;
 
+}
+
+stylo{
+background-color: aqua;justify-content: space-between;
 }
 
 

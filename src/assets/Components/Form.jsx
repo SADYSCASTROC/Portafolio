@@ -30,8 +30,8 @@ color: var(--wite-leter);
    
 }
 input{
-width: 60% ;
-height: 30px ;
+width: 70% ;
+height: 40px ;
 margin:10px;
 background-color: var(--vectores-gray);
 color: var(--wite-leter);
@@ -39,7 +39,7 @@ text-align: center;
 
 }
 textarea{
-    width: 60% ;
+    width: 70% ;
     background-color: var(--vectores-gray);
     color: var(--wite-leter);
     text-align: center;
