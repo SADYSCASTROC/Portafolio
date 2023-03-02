@@ -1,18 +1,30 @@
+import { useEffect } from 'react';
+import AOS from "aos";
+import 'aos/dist/aos.css';
 import styled from "styled-components";
 import '../../index.css';
 import imgForm from '../../img/mdi_user-card-details-outline.png';
 import { Form } from "./Form";
 
 export const ContactSection = () => {
+
+  useEffect(() => {
+    AOS.init({
+        duration: 2000
+    });
+}, []);
+
   return (
+    <div data-aos="fade-up-right" id='contacto'>
     <Contact>
       <h2>Contacto</h2>
       <div className="separator animate__bounceOut"></div>
       <div className="info-contact">
-        <img src={imgForm} alt="" className="imgForm" />
+        <img src={imgForm} alt="" className="imgForm" data-aos="zoom-in-down" />
         <Form/>
       </div>
     </Contact>
+    </div>
   )
 }
 
@@ -36,7 +48,10 @@ margin-top:50px;
     font-size: 2rem ;
   }
   .info-contact{
-    margin-top:25px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .imgForm{
     width: 60%;
@@ -57,5 +72,23 @@ margin-top:50px;
       width: 20%;
       margin-top: 20px;
     }
+  }
+
+
+  @media (min-width: 992px) {
+
+  .info-contact{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+  }
+  .imgForm{
+    width: 24%;
+    height: 250px; 
+    margin-left: 65px;
+    margin-top:-35px;
+  }
+
   }
 `

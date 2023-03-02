@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import AOS from "aos";
+import 'aos/dist/aos.css';
 import styled from "styled-components"
 import '../../index.css'
 import faceboock from '../../img/faceboock.png'
@@ -6,13 +9,23 @@ import git from '../../img/mingcute_github-fill.png'
 import email from '../../img/email.png'
 
 export const RedesSociales = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        });
+    }, []);
+
+
   return (
+
+    <div data-aos="fade-up-right">
     <SectionRedes>
         <div className='containr-img'>
-            <img src={email} alt="" />
-            <img src={linkedin} alt="" />
-            <img src={faceboock} alt="" />
-            <img src={git} alt="" />
+          <a href="mailto:sadyscastro@gmail.com" target='_blank'><img src={email} alt=""/></a>  
+          <a href="https://www.linkedin.com/in/sadys-castro/" target='_blank'><img src={linkedin} alt="" /></a>  
+          <a href="https://www.facebook.com/sadys.castro.56" target='_blank'> <img src={faceboock} alt="" /></a>
+           <a href="https://github.com/SADYSCASTROC" target='_blank'><img src={git} alt="" /></a> 
         </div>
 
         <div className='separator animate__bounceOut'></div>
@@ -24,12 +37,16 @@ export const RedesSociales = () => {
 
 
     </SectionRedes>
+    </div>
   )
 }
 const SectionRedes = styled.section`
 margi-top:10px;
 height: 185px;
 
+a{
+    text-decoration: none;
+}
 .containr-img{
     margin-top:40px;
     text-align: center;
@@ -52,5 +69,15 @@ img{
     color:var(--wite-leter);
     margin-top:50px;
     text-align: center;
+}
+
+
+@media (min-width: 992px) {
+    .separator{
+        width: 30%;  
+    }
+    img{
+        margin:10px;
+    }
 }
 `

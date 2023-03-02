@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { data } from "../../data";
 
 
+
 export const Skill = () => {
 
     const [skillTech, setSkill] = useState(data)

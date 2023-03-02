@@ -1,21 +1,29 @@
 import { useState } from "react";
+import { useEffect } from 'react';
+import AOS from "aos";
+import 'aos/dist/aos.css';
 import styled from "styled-components";
 import '../../index.css'
 import imagenOjo from '../../img/bi_eye-fill.png'
 import { data } from "../../data";
 
 export const Projects = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        });
+    }, []);
     const [portfolioProjects, setportfolioProjects] = useState(data);
     const { projects } = portfolioProjects;
     return (
-        <div>     
+        <div data-aos="fade-up-right" id="portafolio">     
         <ProjectsSection>
             <h2>Proyectos</h2>
             <div className="separator animate__bounceOut"></div>
             <div className="container-car-project">
                 {
                     projects.map(item => (
-                        <div key={item.name} className="card-projects" data-aos="fade-right">
+                        <div key={item.name} className="card-projects" data-aos="flip-right">
                             <img src={item.img} alt="imagen" className="img-projects" />
                             <div className="descrition">
                                 <h3>{item.name}</h3>
@@ -82,15 +90,15 @@ h2{
 }
 .descrition{
     word-wrap: break-word;
-    height: 120px;
-    border-radius: 20px 20px 0 0;
+    height: 230px;
+    border-radius: 20px;
     position: absolute;
     left: 0;
     background-color: rgba(0, 0, 0, .8);
-    width: 100%;
+    width: 80%;
     padding: 10px;
     opacity: 0;
-    bottom: -40px;
+    top:10px;
     transition: .5s;  
     min-width: 190px;
     max-width: 300px; 
@@ -167,18 +175,24 @@ h3{
         height: auto;
         padding: 0;
         width: 100%;
+        justify-content: center;
     }
     .card-projects{
             overflow-y: hidden;
             height: auto;
             padding: 0px;
             width: 26%;
+            position: relative;
         }
 
         .descrition{
-            bottom: -32px;
             width: 26%;
-            left: 52px;
+            left: 53px;
+            height: 230px;
+            bottom: 0px;
+            top: 10px;
+            border-radius: 20px ;
+
         }
         .descrition:hover{
             opacity: 1;
@@ -190,6 +204,10 @@ h3{
             height: 250px;
             width: 200px;
         
+        }
+
+        a{
+            width: 40%;
         }
      }
      

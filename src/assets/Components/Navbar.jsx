@@ -16,10 +16,17 @@ export const Navbar = () => {
             <NavContainer>
                 <h2>SADYS CASTRO</h2>
                 <div className={`links ${clicked ? 'active' : ''}`}>
-                    <a onClick={handleClick} href="">Inicio</a>
-                    <a onClick={handleClick} href="">Sobre mí</a>
-                    <a onClick={handleClick} href="">Portafoleo</a>
-                    <a onClick={handleClick} href="">Contacto</a>
+                    <a onClick={handleClick}  href="#inicio">Inicio</a>
+                    <a onClick={handleClick}  href="#sobreMi">Sobre mí</a>
+                    <a onClick={handleClick}  href="#portafolio">Portafoleo</a>
+                    <a onClick={handleClick}  href="#contacto">Contacto</a>
+                </div>
+
+                <div className='pantallasGrandes'>
+                    <a   href="#inicio">Inicio</a>
+                    <a   href="#sobreMi">Sobre mí</a>
+                    <a   href="#portafolio">Portafoleo</a>
+                    <a   href="#contacto">Contacto</a>
                 </div>
 
                 <div className="burguer">
@@ -39,7 +46,9 @@ const NavContainer = styled.nav`
     --hover-pink: #FF00FF;
     --vectores-gray: #566573;
   }
-
+.pantallasGrandes{
+    display:none;
+}
 h2{
     font-weight: bold;
     color:var(--wite-leter);
@@ -102,13 +111,27 @@ a{
     }
 }
 
+// aquiiiiiiiiiiiiiii
+@media (min-width: 770px) {
+    .pantallasGrandes{
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .links{
+        display:none;
+    }
+}
 `
 const Bgdiv = styled.div`
 position: absolute;
 background-color:  #FFFFFF;
 top: -700px;
 left:-1000px;
-width: 70%;
+width: 100%;
 height: 100%;
 transition: all .8s ease;
 @media(min-width: 769px){
@@ -116,7 +139,7 @@ transition: all .8s ease;
 }
 &.active{
     border-radius: 0 0 80% 0;
-    width: 70%;
+    width: 100%;
     height: 100%;
     top: 55px;
     left: 0;

@@ -22,24 +22,25 @@ const FormCont = styled.div`
 text-align: center;
 margin:0;
 color: var(--wite-leter);
+width: 50% ;
+padding: 2px;
+width: 90%;
 
 #contac{
     display: block;
     color: var(--wite-leter);
-
-   
 }
+
 input{
-width: 70% ;
+width: 90% ;
 height: 40px ;
 margin:10px;
 background-color: var(--vectores-gray);
 color: var(--wite-leter);
 text-align: center;
-
 }
 textarea{
-    width: 70% ;
+    width: 90% ;
     background-color: var(--vectores-gray);
     color: var(--wite-leter);
     text-align: center;
@@ -59,5 +60,28 @@ img{
     height: 30px;
     margin-top:-5px
 }
+
+@media (min-width: 992px) {
+    width: 60%;
+
+    input{
+        width: 50% ;
+        height: 40px ;
+    }
+
+    textarea{
+        width: 50%;
+    }
+
+    img{
+        width: 30% ;
+    }
+
+    button{
+        margin-top:20px;
+        width: 20% ;    
+    }
+}
+
 
 `

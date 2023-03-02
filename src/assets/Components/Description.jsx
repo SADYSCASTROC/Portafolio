@@ -1,11 +1,22 @@
+import { useEffect } from 'react';
+import AOS from "aos";
+import 'aos/dist/aos.css';
 import styled from "styled-components";
-import fotoPerfil from '../../img/hero-foto-perfil.png'
+import fotoPerfil from '../../img/hero-foto-perfil.png';
+import cv from '../../img/Curriculum.pdf'
+
 export const Description = () => {
+  useEffect(() => {
+    AOS.init({
+        duration: 2000
+    });
+}, []);
+
   return (
-    <div className="animate__fadeInLeft" data-aos="fade-right">    
+    <div className="animate__fadeInLeft" data-aos="fade-up-right" id='inicio'>    
       <DescriptionAbput>
       <img src={fotoPerfil} alt="foto" />
-      <div className="container" data-aos="fade-right">
+      <div className="container" data-aos="fade-up-right">
         <h3>Sadys Castro, <span>Desarrolladora web</span></h3>
         <p>Ingrese al mundo de la tecnología porque la 
           duda de saber como funcionaban las cosas en el mundo tecnológico,
@@ -18,7 +29,9 @@ export const Description = () => {
 
           Busco siempre aprender con el fin de crecer personal e intelectualmente.
         </p>
-        <button>Desacargar Cv</button>
+        <br />
+        <br /><br />
+        <a download='CurriculoSadys' href={cv}>Desacargar Cv</a>
       </div>
     </DescriptionAbput>
     </div>
@@ -35,10 +48,12 @@ const DescriptionAbput = styled.section`
 }
 
 height: auto;
-width: 80%;
+width: 100%;
 padding: 20px;
 text-align: center;
 text-align: -webkit-center;
+text-align: center;
+margin: auto;
 
 
 img{
@@ -67,13 +82,16 @@ p{
 
 }
 
-button{
-  margin-top: 18px;
+a{
+  margin-top: 25px;
   padding: 8px;
   background-color: var(  --vectores-gray);
   color: var(--wite-leter);
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;}
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  text-decoration: none;
+}
+
 button:hover{
   border: 2px solid var(--hover-pink);
 }
@@ -93,6 +111,7 @@ button:hover{
     line-height: 2.6rem;
 }
 @media (min-width: 992px) {
+  width: 90%;
   display: flex;
   flex-direction: row-reverse;
 
