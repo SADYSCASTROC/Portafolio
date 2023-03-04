@@ -1,21 +1,45 @@
+import React, { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
 import styled from "styled-components"
 import '../../index.css';
-import imgAdd from'../../img/enviar.png';
+import imgAdd from '../../img/enviar.png';
+import Swal from 'sweetalert2'
 
 export const Form = () => {
-  return (
-    <FormCont>
-        <form action="" id="contac">
-            <input type="text" placeholder="Nombre" />
-            <input type="email"
-             pattern=".+@globex\.com"  required 
-             placeholder="Correo">
-             </input>
-            <textarea name="textarea" rows="7" cols="50" placeholder="Mensaje"></textarea>
-            <button><img src={imgAdd} alt="" /></button>
-        </form>
-    </FormCont>
-  )
+    const form = useRef();
+    const [resetForm, setResetForm] = useState(form);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_cbtv2fl', 'template_9llykgw', form.current, 'jdU4LOKB06uQM1bX9')
+            .then((result) => {
+                console.log(result.text);
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Gracias por contactarme ',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                setResetForm(resetForm.reset())
+            }, (error) => {
+                console.log(error.text);
+            });
+
+    }
+
+    return (
+        <FormCont>
+            <form ref={form} onSubmit={sendEmail} id="contac">
+                <input type="text" placeholder="Nombre" name="user_name" required />
+                <input type="email" placeholder="Correo" name="user_email" required>
+                </input>
+                <textarea rows="7" cols="50" placeholder="Mensaje" name="message" required></textarea>
+                <button type='submit'><img src={imgAdd} alt="" /> <p>Enviar</p> </button>
+            </form>
+        </FormCont>
+    )
 }
 
 const FormCont = styled.div`
@@ -54,6 +78,20 @@ button{
     background-color: var(--vectores-gray);
     border: 2px solid #FF00FF;
 
+    p{
+        color: var(--wite-leter);
+        display:none;
+    }
+
+}
+button:hover{
+    img{
+        display: none;
+    }
+    p{
+        display:block;
+        font-size: 15px;
+    }
 }
 img{
     width: 40% ;
