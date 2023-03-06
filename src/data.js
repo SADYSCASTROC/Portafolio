@@ -34,7 +34,7 @@ export const data = {
             "name": "BATATABIT",
             "img": "https://i.ibb.co/QQ6G8Jh/proyec2-1.png",
             "tecnologias": "HTML,CSS",
-            "links": "https://app.netlify.com/sites/statuesque-froyo-b7cb8d/overview",
+            "links": "https://statuesque-froyo-b7cb8d.netlify.app/",
         },
         {
             "name": "VALIDATE CARD",

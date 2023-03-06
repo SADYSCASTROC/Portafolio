@@ -3,7 +3,7 @@ import AOS from "aos";
 import 'aos/dist/aos.css';
 import styled from "styled-components";
 import fotoPerfil from '../../img/hero-foto-perfil.png';
-import cv from '../../img/Curriculum.pdf'
+import cv from '../../img/Curriculum Sadys.pdf'
 
 export const Description = () => {
   useEffect(() => {
